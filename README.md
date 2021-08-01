@@ -1,1 +1,1 @@
-# Chat App Useing MERN and Socket.io
+# Chat App Using MERN and Socket.io
