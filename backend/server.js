@@ -3,8 +3,9 @@ import dotenv from "dotenv";
 import colors from "colors";
 
 import connectToDatabase from "./config/databaseConfig.js";
+import userRoutes from "./routes/userRoutes.js";
 
-// get environment variables
+// config environment variables
 dotenv.config();
 
 connectToDatabase();
@@ -19,6 +20,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Mass Effect Fan Club API is running");
 });
+
+// mount routes
+app.use("/api/users", userRoutes);
 
 app.listen(
   PORT,
